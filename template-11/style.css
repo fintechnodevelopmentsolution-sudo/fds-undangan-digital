@@ -1,13 +1,13 @@
-﻿:root {
-     --bg: #f9f1ee;
-     --bg2: #f1e5df;
-     --panel: rgba(255, 255, 255, 0.74);
-     --text: #2d2626;
-     --muted: #675d5d;
-     --primary: #d78b88;
-     --primary-strong: #b76164;
-     --gold: #d7be94;
-     --line: rgba(45, 38, 38, 0.1);
+:root {
+     --bg: #f9f3f8;
+     --bg2: #efe2ee;
+     --panel: rgba(255, 255, 255, 0.75);
+     --text: #2d1f2b;
+     --muted: #625165;
+     --primary: #a676a5;
+     --primary-strong: #724d77;
+     --gold: #d9c08f;
+     --line: rgba(45, 31, 43, 0.08);
 }
 
 * {
@@ -41,11 +41,11 @@ a {
      grid-template-columns: 1.08fr 0.92fr;
      gap: 28px;
      align-items: center;
-     background: rgba(255, 255, 255, 0.52);
+     background: rgba(255, 255, 255, 0.56);
      border: 1px solid var(--line);
      border-radius: 32px;
      padding: 24px;
-     box-shadow: 0 25px 60px rgba(94, 67, 62, 0.08);
+     box-shadow: 0 25px 60px rgba(92, 57, 82, 0.08);
 }
 
 .eyebrow {
@@ -86,12 +86,10 @@ h4 {
 
 .date-pill {
      display: inline-flex;
-     align-items: center;
-     justify-content: center;
      padding: 12px 18px;
      border-radius: 999px;
-     background: rgba(215, 139, 136, 0.14);
-     border: 1px solid rgba(183, 97, 100, 0.25);
+     background: rgba(167, 118, 165, 0.12);
+     border: 1px solid rgba(114, 77, 119, 0.18);
      color: var(--primary-strong);
      font-weight: 700;
 }
@@ -176,7 +174,7 @@ h4 {
      grid-template-columns: 120px 1fr;
      gap: 18px;
      align-items: center;
-     background: rgba(255, 255, 255, 0.5);
+     background: rgba(255, 255, 255, 0.55);
      border: 1px solid var(--line);
      border-radius: 18px;
      padding: 20px 24px;
@@ -188,7 +186,7 @@ h4 {
      align-items: center;
      min-height: 58px;
      border-radius: 12px;
-     background: rgba(215, 139, 136, 0.12);
+     background: rgba(167, 118, 165, 0.12);
      color: var(--primary-strong);
      font-weight: 700;
 }
@@ -203,31 +201,13 @@ h4 {
      color: var(--muted);
 }
 
-.gallery {
-     margin-top: 70px;
-}
-
-.gallery-grid {
-     display: grid;
-     grid-template-columns: repeat(3, minmax(0, 1fr));
-     gap: 18px;
-     margin-top: 14px;
-}
-
-.gallery-grid img {
-     width: 100%;
-     height: 260px;
-     object-fit: cover;
-     border-radius: 18px;
-}
-
 .rsvp {
      margin-top: 70px;
 }
 
 .rsvp-box {
      text-align: center;
-     background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(241, 229, 223, 0.82));
+     background: linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(239, 226, 238, 0.76));
      border: 1px solid var(--line);
      border-radius: 28px;
      padding: 42px 18px;
@@ -247,13 +227,12 @@ h4 {
 
 .rsvp-box a {
      display: inline-block;
-     text-decoration: none;
      background: linear-gradient(135deg, var(--primary), var(--primary-strong));
      color: #fff;
      font-weight: 700;
      padding: 14px 28px;
      border-radius: 999px;
-     box-shadow: 0 18px 32px rgba(183, 97, 100, 0.2);
+     box-shadow: 0 18px 32px rgba(114, 77, 119, 0.2);
 }
 
 .music-toggle {
@@ -268,56 +247,64 @@ h4 {
      background: linear-gradient(135deg, var(--primary), var(--primary-strong));
      color: white;
      font-size: 1.2rem;
-     box-shadow: 0 18px 30px rgba(183, 97, 100, 0.24);
+     box-shadow: 0 18px 30px rgba(114, 77, 119, 0.2);
      cursor: pointer;
 }
 
-@media (max-width: 768px) {
-     .hero {
-          grid-template-columns: 1fr;
-          text-align: center;
-     }
-
-     .details,
-     .gallery-grid {
-          grid-template-columns: 1fr;
-     }
-
-     .time-item {
-          grid-template-columns: 1fr;
-          text-align: center;
-     }
-
-     .hero__photo img {
-          height: 420px;
-     }
-}
 body {
      opacity: 0;
      animation: pageFadeIn 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.page-shell > * {
+.page-shell>* {
      opacity: 0;
      transform: translateY(30px);
      animation: riseIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.page-shell > *:nth-child(1) { animation-delay: 0.08s; }
-.page-shell > *:nth-child(2) { animation-delay: 0.14s; }
-.page-shell > *:nth-child(3) { animation-delay: 0.2s; }
-.page-shell > *:nth-child(4) { animation-delay: 0.26s; }
-.page-shell > *:nth-child(5) { animation-delay: 0.32s; }
-.page-shell > *:nth-child(6) { animation-delay: 0.38s; }
-.page-shell > *:nth-child(7) { animation-delay: 0.44s; }
-.page-shell > *:nth-child(8) { animation-delay: 0.5s; }
-.page-shell > *:nth-child(9) { animation-delay: 0.56s; }
-.page-shell > *:nth-child(10) { animation-delay: 0.62s; }
+.page-shell>*:nth-child(1) {
+     animation-delay: 0.08s;
+}
+
+.page-shell>*:nth-child(2) {
+     animation-delay: 0.14s;
+}
+
+.page-shell>*:nth-child(3) {
+     animation-delay: 0.2s;
+}
+
+.page-shell>*:nth-child(4) {
+     animation-delay: 0.26s;
+}
+
+.page-shell>*:nth-child(5) {
+     animation-delay: 0.32s;
+}
+
+.page-shell>*:nth-child(6) {
+     animation-delay: 0.38s;
+}
+
+.page-shell>*:nth-child(7) {
+     animation-delay: 0.44s;
+}
+
+.page-shell>*:nth-child(8) {
+     animation-delay: 0.5s;
+}
+
+.page-shell>*:nth-child(9) {
+     animation-delay: 0.56s;
+}
+
+.page-shell>*:nth-child(10) {
+     animation-delay: 0.62s;
+}
 
 .hero,
 .card-box,
 .time-item,
-.gallery-grid img,
 .rsvp-box,
 .music-toggle,
 .hero__photo img {
@@ -327,13 +314,11 @@ body {
 .hero:hover,
 .card-box:hover,
 .time-item:hover,
-.gallery-grid img:hover,
 .rsvp-box:hover {
      transform: translateY(-4px);
 }
 
-.hero__photo img:hover,
-.gallery-grid img:hover {
+.hero__photo img:hover {
      transform: scale(1.02);
 }
 
@@ -347,6 +332,7 @@ body {
           filter: blur(8px);
           transform: scale(0.985);
      }
+
      to {
           opacity: 1;
           filter: blur(0);
@@ -359,8 +345,29 @@ body {
           opacity: 0;
           transform: translateY(30px);
      }
+
      to {
           opacity: 1;
           transform: translateY(0);
+     }
+}
+
+@media (max-width: 768px) {
+     .hero {
+          grid-template-columns: 1fr;
+          text-align: center;
+     }
+
+     .details {
+          grid-template-columns: 1fr;
+     }
+
+     .time-item {
+          grid-template-columns: 1fr;
+          text-align: center;
+     }
+
+     .hero__photo img {
+          height: 420px;
      }
 }
