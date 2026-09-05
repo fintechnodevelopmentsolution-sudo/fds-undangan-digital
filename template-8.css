@@ -1,0 +1,198 @@
+:root {
+     --bg: #f4f8f0;
+     --panel: rgba(255, 255, 255, 0.8);
+     --text: #1f2d24;
+     --muted: #5d7267;
+     --leaf: #9ab891;
+     --leaf-dark: #638164;
+     --line: rgba(31, 45, 36, 0.08);
+}
+
+* {
+     box-sizing: border-box;
+}
+
+body {
+     margin: 0;
+     font-family: "Inter", sans-serif;
+     color: var(--text);
+     background: linear-gradient(180deg, #f8fbf5 0%, #edf4eb 100%);
+}
+
+img {
+     max-width: 100%;
+     display: block;
+}
+
+.page-shell {
+     max-width: 1120px;
+     margin: 40px auto;
+     padding: 18px 16px 80px;
+}
+
+.hero {
+     min-height: 600px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     background: linear-gradient(135deg, rgba(37, 56, 42, 0.54), rgba(96, 127, 97, 0.24)), url('https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+     border-radius: 30px;
+     box-shadow: 0 30px 70px rgba(86, 111, 86, 0.12);
+}
+
+.hero__content {
+     color: white;
+}
+
+.eyebrow {
+     margin: 0 0 14px;
+     font-size: 0.72rem;
+     letter-spacing: 0.2em;
+     text-transform: uppercase;
+     color: #edf9ec;
+     font-weight: 700;
+}
+
+.eyebrow.small {
+     letter-spacing: 0.15em;
+}
+
+.hero__content h1,
+.text h2,
+.rsvp-box h2,
+.card h3 {
+     font-family: "Cormorant Garamond", serif;
+}
+
+.hero__content h1 {
+     margin: 0;
+     font-size: clamp(3.2rem, 5vw, 5.7rem);
+     line-height: 0.9;
+}
+
+.hero__content h1 span {
+     color: #dff6d3;
+}
+
+.subtitle {
+     max-width: 660px;
+     margin: 18px auto 24px;
+     color: rgba(255, 255, 255, 0.9);
+     line-height: 1.8;
+}
+
+.date-pill {
+     display: inline-block;
+     padding: 12px 20px;
+     border-radius: 999px;
+     background: rgba(255, 255, 255, 0.15);
+     border: 1px solid rgba(255, 255, 255, 0.22);
+     font-weight: 700;
+}
+
+.details {
+     display: grid;
+     grid-template-columns: repeat(3, minmax(0, 1fr));
+     gap: 18px;
+     margin-top: 30px;
+}
+
+.card {
+     background: var(--panel);
+     border: 1px solid var(--line);
+     border-radius: 22px;
+     text-align: center;
+     padding: 24px 20px;
+}
+
+.label {
+     display: block;
+     margin-bottom: 10px;
+     font-size: 0.72rem;
+     letter-spacing: 0.16em;
+     text-transform: uppercase;
+     color: var(--leaf-dark);
+     font-weight: 700;
+}
+
+.card h3 {
+     margin: 0;
+     font-size: 2rem;
+}
+
+.card p {
+     margin: 10px 0 0;
+     color: var(--muted);
+}
+
+.story {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 24px;
+     align-items: center;
+     margin-top: 60px;
+}
+
+.text h2 {
+     margin: 0 0 12px;
+     font-size: clamp(2.4rem, 4vw, 4rem);
+}
+
+.text p {
+     color: var(--muted);
+     line-height: 1.9;
+}
+
+.photo img {
+     width: 100%;
+     height: 500px;
+     object-fit: cover;
+     border-radius: 24px;
+}
+
+.rsvp {
+     margin-top: 60px;
+}
+
+.rsvp-box {
+     text-align: center;
+     background: linear-gradient(135deg, rgba(255, 255, 255, 0.76), rgba(154, 184, 145, 0.2));
+     border: 1px solid var(--line);
+     border-radius: 28px;
+     padding: 38px 20px;
+}
+
+.rsvp-box h2 {
+     margin: 0 0 12px;
+     font-size: clamp(2.2rem, 4vw, 3.2rem);
+}
+
+.rsvp-box p {
+     max-width: 640px;
+     margin: 0 auto 18px;
+     color: var(--muted);
+     line-height: 1.8;
+}
+
+.rsvp-box a {
+     display: inline-block;
+     text-decoration: none;
+     background: linear-gradient(135deg, var(--leaf), var(--leaf-dark));
+     color: white;
+     font-weight: 700;
+     padding: 14px 24px;
+     border-radius: 999px;
+}
+
+@media (max-width:768px) {
+
+     .details,
+     .story {
+          grid-template-columns: 1fr;
+     }
+
+     .photo img {
+          height: 360px;
+     }
+}

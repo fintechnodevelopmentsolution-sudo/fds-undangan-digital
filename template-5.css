@@ -1,0 +1,206 @@
+:root {
+     --bg: #eaf6fb;
+     --panel: rgba(255, 255, 255, 0.75);
+     --text: #1b2d38;
+     --muted: #55717d;
+     --sky: #7ac0d6;
+     --ocean: #316d8d;
+     --line: rgba(27, 45, 56, 0.1);
+}
+
+* {
+     box-sizing: border-box;
+}
+
+body {
+     margin: 0;
+     font-family: "Inter", sans-serif;
+     color: var(--text);
+     background: linear-gradient(180deg, #eef9ff 0%, #dff0f5 100%);
+}
+
+img {
+     max-width: 100%;
+     display: block;
+}
+
+.page-shell {
+     max-width: 1120px;
+     margin: 36px auto;
+     padding: 18px 16px 80px;
+}
+
+.hero {
+     min-height: 620px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 40px 20px;
+     background: linear-gradient(135deg, rgba(44, 94, 117, 0.52), rgba(27, 45, 56, 0.3)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+     border-radius: 30px;
+     box-shadow: 0 30px 70px rgba(21, 52, 67, 0.14);
+}
+
+.hero__content {
+     text-align: center;
+     color: white;
+}
+
+.eyebrow {
+     margin: 0 0 14px;
+     font-size: 0.72rem;
+     letter-spacing: 0.22em;
+     font-weight: 700;
+     color: #dfeef5;
+     text-transform: uppercase;
+}
+
+.eyebrow.small {
+     letter-spacing: 0.14em;
+}
+
+.hero__content h1,
+.story h2,
+.rsvp-box h2,
+.card h3 {
+     font-family: "Cormorant Garamond", serif;
+}
+
+.hero__content h1 {
+     margin: 0;
+     font-size: clamp(3.3rem, 5vw, 6rem);
+     line-height: 0.9;
+}
+
+.hero__content h1 span {
+     color: #d8f0ff;
+}
+
+.subtitle {
+     max-width: 680px;
+     margin: 18px auto 24px;
+     font-size: 1.05rem;
+     line-height: 1.8;
+     color: rgba(255, 255, 255, 0.9);
+}
+
+.date-pill {
+     display: inline-block;
+     padding: 12px 24px;
+     border-radius: 999px;
+     background: rgba(255, 255, 255, 0.15);
+     border: 1px solid rgba(255, 255, 255, 0.28);
+     font-weight: 700;
+     letter-spacing: 0.08em;
+     text-transform: uppercase;
+}
+
+.details {
+     display: grid;
+     grid-template-columns: repeat(3, minmax(0, 1fr));
+     gap: 18px;
+     margin-top: 30px;
+}
+
+.card {
+     background: var(--panel);
+     border: 1px solid var(--line);
+     border-radius: 22px;
+     padding: 26px 20px;
+     text-align: center;
+}
+
+.label {
+     display: block;
+     margin-bottom: 10px;
+     font-size: 0.72rem;
+     letter-spacing: 0.16em;
+     text-transform: uppercase;
+     color: var(--ocean);
+     font-weight: 700;
+}
+
+.card h3 {
+     margin: 0;
+     font-size: 2rem;
+}
+
+.card p {
+     margin: 10px 0 0;
+     color: var(--muted);
+}
+
+.story {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 26px;
+     align-items: center;
+     margin-top: 60px;
+}
+
+.photo img {
+     width: 100%;
+     height: 500px;
+     object-fit: cover;
+     border-radius: 26px;
+}
+
+.text h2 {
+     margin: 0 0 12px;
+     font-size: clamp(2.4rem, 4vw, 4rem);
+}
+
+.text p {
+     color: var(--muted);
+     line-height: 1.9;
+}
+
+.rsvp {
+     margin-top: 60px;
+}
+
+.rsvp-box {
+     background: linear-gradient(135deg, rgba(255, 255, 255, 0.75), rgba(122, 192, 214, 0.12));
+     border: 1px solid var(--line);
+     border-radius: 24px;
+     text-align: center;
+     padding: 40px 20px;
+}
+
+.rsvp-box h2 {
+     margin: 0 0 12px;
+     font-size: clamp(2.2rem, 4vw, 3.2rem);
+}
+
+.rsvp-box p {
+     max-width: 640px;
+     margin: 0 auto 18px;
+     color: var(--muted);
+     line-height: 1.8;
+}
+
+.rsvp-box a {
+     display: inline-block;
+     text-decoration: none;
+     background: linear-gradient(135deg, var(--sky), var(--ocean));
+     color: white;
+     font-weight: 700;
+     padding: 14px 26px;
+     border-radius: 999px;
+}
+
+@media (max-width:768px) {
+
+     .details,
+     .story {
+          grid-template-columns: 1fr;
+     }
+
+     .hero {
+          min-height: 500px;
+     }
+
+     .photo img {
+          height: 360px;
+     }
+}
