@@ -1,0 +1,198 @@
+:root {
+     --bg: #f7f2ea;
+     --panel: rgba(255, 255, 255, 0.78);
+     --text: #2b1f1c;
+     --muted: #6f5b54;
+     --rose: #d4ad9d;
+     --rose-dark: #a77767;
+     --line: rgba(43, 31, 28, 0.08);
+}
+
+* {
+     box-sizing: border-box;
+}
+
+body {
+     margin: 0;
+     font-family: "Inter", sans-serif;
+     color: var(--text);
+     background: linear-gradient(180deg, #f9f4ee 0%, #f2e9e1 100%);
+}
+
+img {
+     max-width: 100%;
+     display: block;
+}
+
+.page-shell {
+     max-width: 1120px;
+     margin: 40px auto;
+     padding: 18px 16px 80px;
+}
+
+.hero {
+     min-height: 580px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     background: linear-gradient(135deg, rgba(94, 67, 58, 0.6), rgba(125, 90, 77, 0.35)), url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+     border-radius: 28px;
+     box-shadow: 0 28px 65px rgba(92, 72, 66, 0.14);
+}
+
+.hero__content {
+     color: white;
+}
+
+.eyebrow {
+     margin: 0 0 14px;
+     font-size: 0.72rem;
+     letter-spacing: 0.2em;
+     text-transform: uppercase;
+     color: #f8e8df;
+     font-weight: 700;
+}
+
+.eyebrow.small {
+     letter-spacing: 0.15em;
+}
+
+.hero__content h1,
+.text h2,
+.rsvp-box h2,
+.card h3 {
+     font-family: "Cormorant Garamond", serif;
+}
+
+.hero__content h1 {
+     margin: 0;
+     font-size: clamp(3.3rem, 5vw, 5.8rem);
+     line-height: 0.9;
+}
+
+.hero__content h1 span {
+     color: #f9d7bc;
+}
+
+.subtitle {
+     max-width: 650px;
+     margin: 18px auto 24px;
+     color: rgba(255, 255, 255, 0.88);
+     line-height: 1.9;
+}
+
+.date-pill {
+     display: inline-block;
+     padding: 12px 20px;
+     border-radius: 999px;
+     background: rgba(255, 255, 255, 0.16);
+     border: 1px solid rgba(255, 255, 255, 0.22);
+     font-weight: 700;
+}
+
+.details {
+     display: grid;
+     grid-template-columns: repeat(3, minmax(0, 1fr));
+     gap: 18px;
+     margin-top: 28px;
+}
+
+.card {
+     background: var(--panel);
+     border: 1px solid var(--line);
+     border-radius: 20px;
+     padding: 24px 20px;
+     text-align: center;
+}
+
+.label {
+     display: block;
+     margin-bottom: 10px;
+     font-size: 0.7rem;
+     letter-spacing: 0.18em;
+     text-transform: uppercase;
+     color: var(--rose-dark);
+     font-weight: 700;
+}
+
+.card h3 {
+     margin: 0;
+     font-size: 2rem;
+}
+
+.card p {
+     margin: 10px 0 0;
+     color: var(--muted);
+}
+
+.story {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 24px;
+     align-items: center;
+     margin-top: 60px;
+}
+
+.text h2 {
+     margin: 0 0 12px;
+     font-size: clamp(2.4rem, 4vw, 4rem);
+}
+
+.text p {
+     color: var(--muted);
+     line-height: 1.9;
+}
+
+.photo img {
+     width: 100%;
+     height: 500px;
+     object-fit: cover;
+     border-radius: 24px;
+}
+
+.rsvp {
+     margin-top: 60px;
+}
+
+.rsvp-box {
+     text-align: center;
+     background: linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(212, 173, 157, 0.18));
+     border: 1px solid var(--line);
+     border-radius: 28px;
+     padding: 38px 20px;
+}
+
+.rsvp-box h2 {
+     margin: 0 0 12px;
+     font-size: clamp(2.2rem, 4vw, 3.2rem);
+}
+
+.rsvp-box p {
+     max-width: 640px;
+     margin: 0 auto 18px;
+     color: var(--muted);
+     line-height: 1.8;
+}
+
+.rsvp-box a {
+     display: inline-block;
+     text-decoration: none;
+     background: linear-gradient(135deg, var(--rose), var(--rose-dark));
+     color: white;
+     font-weight: 700;
+     padding: 14px 24px;
+     border-radius: 999px;
+}
+
+@media (max-width:768px) {
+
+     .details,
+     .story {
+          grid-template-columns: 1fr;
+     }
+
+     .photo img {
+          height: 360px;
+     }
+}
