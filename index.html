@@ -4,7 +4,7 @@
 <head>
      <meta charset="UTF-8" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <title>Undangan Online Collection</title>
+     <title>FDS | Fintechno Development Solution</title>
      <style>
           @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
@@ -73,15 +73,16 @@
           }
 
           .brand-mark {
-               width: 38px;
-               height: 38px;
-               border-radius: 12px;
-               background: linear-gradient(135deg, var(--primary), #f3c1b2);
+               width: 148px;
+               height: 52px;
+               border-radius: 9px;
+               background: #fff url('logo.jpg') center / contain no-repeat;
                display: grid;
                place-items: center;
-               color: white;
-               font-size: 1.1rem;
-               box-shadow: 0 12px 24px rgba(215, 127, 122, 0.25);
+               color: transparent;
+               font-size: 0;
+               border: 1px solid rgba(31, 26, 26, 0.08);
+               box-shadow: 0 12px 24px rgba(42, 27, 27, 0.1);
           }
 
           .nav {
@@ -370,6 +371,24 @@
                line-height: 1.8;
           }
 
+          .catalog-socials {
+               display: flex;
+               flex-wrap: wrap;
+               justify-content: center;
+               gap: 10px 16px;
+               margin-top: 18px;
+               font-size: 0.82rem;
+               font-weight: 700;
+          }
+
+          .catalog-socials a {
+               color: var(--primary-dark);
+          }
+
+          .catalog-socials a:hover {
+               color: var(--text);
+          }
+
           @media (max-width: 900px) {
                .hero__wrap {
                     grid-template-columns: 1fr;
@@ -399,10 +418,13 @@
 <body>
      <header class="topbar">
           <div class="container">
-               <div class="brand">
+               <a class="brand" href="https://fintechnodevelopmentsolution-sudo.github.io/website-fds/" target="_blank"
+                    rel="noopener">
                     <div class="brand-mark">❤</div>
-                    <span>Undangan Online</span>
-               </div>
+                    <span>FDS <small
+                              style="display:block;font-size:.62rem;font-weight:500;opacity:.65;letter-spacing:.02em;">Fintechno
+                              Development Solution</small></span>
+               </a>
 
                <nav class="nav">
                     <a href="#catalog">Template</a>
@@ -417,7 +439,8 @@
                <div>
                     <h1>Pilih desain undangan <span>yang paling cocok</span> untuk acara istimewa Anda.</h1>
                     <p>
-                         Koleksi template undangan online modern, hangat, dan elegan. Setiap desain dibuat agar tampil
+                         FDS - Fintechno Development Solution menghadirkan koleksi template undangan online modern,
+                         hangat, dan elegan. Setiap desain dibuat agar tampil
                          profesional,
                          nyaman dilihat di HP maupun laptop, dan siap diubah sesuai nama tamu, tanggal, serta lokasi
                          acara.
@@ -820,6 +843,11 @@
                     <p>Semua template dibuat dalam file HTML dan CSS terpisah, dengan efek JavaScript yang membuat
                          tampilannya terasa lebih hidup dan modern.</p>
                     <a href="template-1/index.html" class="btn primary" target="_blank">Mulai Lihat Template</a>
+                    <div class="catalog-socials"><a
+                              href="https://fintechnodevelopmentsolution-sudo.github.io/website-fds/" target="_blank"
+                              rel="noopener">Website FDS</a><a href="https://www.tiktok.com/@fintechno_" target="_blank"
+                              rel="noopener">TikTok @fintechno_</a><a href="https://www.instagram.com/fintechno_/"
+                              target="_blank" rel="noopener">Instagram @fintechno_</a></div>
                </div>
           </div>
      </section>

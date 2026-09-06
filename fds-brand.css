@@ -1,0 +1,233 @@
+/* Shared FDS identity layer for every invitation template. */
+:root {
+     --fds-coral: #e66f51;
+     --fds-ink: #18232b;
+     --fds-soft: rgba(255, 255, 255, 0.72);
+     --fds-line: rgba(24, 35, 43, 0.12);
+}
+
+.fds-brandbar {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 18px;
+     margin: 0 0 18px;
+     padding: 12px 16px;
+     color: var(--fds-ink);
+     background: var(--fds-soft);
+     border: 1px solid var(--fds-line);
+     border-radius: 16px;
+     box-shadow: 0 12px 28px rgba(24, 35, 43, 0.07);
+     backdrop-filter: blur(14px);
+}
+
+.fds-brand {
+     display: inline-flex;
+     align-items: center;
+     gap: 10px;
+     color: inherit;
+     font: 700 0.82rem/1.15 Inter, sans-serif;
+     letter-spacing: 0.04em;
+}
+
+.fds-mark {
+     display: grid;
+     place-items: center;
+     width: 136px;
+     height: 48px;
+     flex: 0 0 136px;
+     color: transparent;
+     background: #fff url("logo.jpg") center / contain no-repeat;
+     border: 1px solid rgba(24, 35, 43, 0.08);
+     border-radius: 9px;
+     box-shadow: 0 9px 18px rgba(24, 35, 43, 0.1);
+     font-size: 0;
+}
+
+.fds-brand>span:last-child {
+     display: none;
+}
+
+.fds-brand small {
+     display: block;
+     margin-top: 3px;
+     color: currentColor;
+     opacity: 0.62;
+     font-size: 0.62rem;
+     font-weight: 500;
+     letter-spacing: 0.02em;
+}
+
+.fds-brandbar__tag {
+     margin: 0;
+     color: currentColor;
+     opacity: 0.62;
+     font: 600 0.67rem/1.4 Inter, sans-serif;
+     letter-spacing: 0.12em;
+     text-align: right;
+     text-transform: uppercase;
+}
+
+.fds-extra {
+     display: grid;
+     grid-template-columns: 1.1fr 0.9fr;
+     gap: 18px;
+     margin-top: 30px;
+}
+
+.fds-panel {
+     padding: 26px;
+     color: var(--fds-ink);
+     background: var(--fds-soft);
+     border: 1px solid var(--fds-line);
+     border-radius: 22px;
+     box-shadow: 0 16px 36px rgba(24, 35, 43, 0.06);
+}
+
+.fds-kicker {
+     margin: 0 0 8px;
+     color: var(--fds-coral);
+     font: 700 0.68rem/1.3 Inter, sans-serif;
+     letter-spacing: 0.18em;
+     text-transform: uppercase;
+}
+
+.fds-panel h2,
+.fds-panel h3 {
+     margin: 0;
+     font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.fds-panel h2 {
+     font-size: clamp(2rem, 3.5vw, 3.2rem);
+     line-height: 0.98;
+}
+
+.fds-panel h3 {
+     font-size: 1.75rem;
+}
+
+.fds-panel p {
+     margin: 12px 0 0;
+     color: currentColor;
+     opacity: 0.72;
+     line-height: 1.75;
+}
+
+.fds-perks {
+     display: grid;
+     gap: 12px;
+     margin: 18px 0 0;
+     padding: 0;
+     list-style: none;
+}
+
+.fds-perks li {
+     display: flex;
+     align-items: flex-start;
+     gap: 10px;
+     color: currentColor;
+     font: 600 0.86rem/1.5 Inter, sans-serif;
+}
+
+.fds-perks li::before {
+     content: "✓";
+     display: grid;
+     place-items: center;
+     width: 22px;
+     height: 22px;
+     flex: 0 0 22px;
+     color: #fff;
+     background: var(--fds-coral);
+     border-radius: 50%;
+     font-size: 0.72rem;
+}
+
+.fds-contact {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 10px;
+     margin-top: 18px;
+}
+
+.fds-contact a {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     padding: 10px 14px;
+     color: #fff;
+     background: var(--fds-coral);
+     border-radius: 999px;
+     font: 700 0.78rem/1 Inter, sans-serif;
+     transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.fds-contact a:hover {
+     transform: translateY(-2px);
+     box-shadow: 0 10px 20px rgba(230, 111, 81, 0.22);
+}
+
+.fds-footer {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 16px;
+     margin-top: 28px;
+     padding: 18px 4px 0;
+     color: currentColor;
+     opacity: 0.68;
+     border-top: 1px solid var(--fds-line);
+     font: 500 0.72rem/1.5 Inter, sans-serif;
+}
+
+.fds-footer strong {
+     color: var(--fds-coral);
+}
+
+.fds-socials {
+     display: inline-flex;
+     flex-wrap: wrap;
+     gap: 8px;
+}
+
+.fds-socials a {
+     color: currentColor;
+     font-weight: 700;
+     text-decoration: none;
+}
+
+.fds-socials a:hover {
+     color: var(--fds-coral);
+}
+
+@media (max-width: 680px) {
+     .fds-brandbar {
+          align-items: flex-start;
+          padding: 11px 12px;
+     }
+
+     .fds-mark {
+          width: 118px;
+          height: 42px;
+          flex-basis: 118px;
+     }
+
+     .fds-brandbar__tag {
+          max-width: 130px;
+          font-size: 0.58rem;
+     }
+
+     .fds-extra {
+          grid-template-columns: 1fr;
+     }
+
+     .fds-panel {
+          padding: 22px 18px;
+     }
+
+     .fds-footer {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 5px;
+     }
+}
