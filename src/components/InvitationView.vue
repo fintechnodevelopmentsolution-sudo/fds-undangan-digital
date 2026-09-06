@@ -9,6 +9,7 @@ const audio = ref(null);
 const isPlaying = ref(false);
 const showNotice = ref(true);
 const revealObserver = ref(null);
+const logoUrl = `${import.meta.env.BASE_URL}logo-transparan.png`;
 
 const themeStyle = computed(() => ({
      '--theme-primary': props.template.primary,
@@ -66,7 +67,7 @@ onBeforeUnmount(() => revealObserver.value?.disconnect());
 
           <main class="invitation-shell">
                <div class="brandbar">
-                    <img class="brandmark" src="/logo-transparan.png" alt="FDS" />
+                    <img class="brandmark" :src="logoUrl" alt="FDS" />
                     <span>Fintechno Development Solution</span>
                     <span class="brandbar__tag">Fintechno Development Solution</span>
                </div>

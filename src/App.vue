@@ -5,6 +5,7 @@ import { getTemplate, templates } from './data/templates';
 
 const selectedId = ref(new URLSearchParams(window.location.search).get('template'));
 const isLoading = ref(true);
+const logoUrl = `${import.meta.env.BASE_URL}logo-transparan.png`;
 const selectedTemplate = computed(() => selectedId.value ? getTemplate(selectedId.value) : null);
 
 window.setTimeout(() => {
@@ -29,14 +30,14 @@ function showCatalog() {
 <template>
      <Transition name="loader">
           <div v-if="isLoading" class="app-loader" role="status" aria-live="polite">
-               <div class="app-loader__pulse"><img src="/logo-transparan.png" alt="FDS" /></div>
+               <div class="app-loader__pulse"><img :src="logoUrl" alt="FDS" /></div>
                <span>Menyiapkan pengalaman undangan</span>
           </div>
      </Transition>
      <InvitationView v-if="selectedTemplate" :template="selectedTemplate" />
      <div v-else class="catalog-app">
           <header class="catalog-header">
-               <a class="catalog-brand" href="." aria-label="FDS home"><img src="/logo-transparan.png" alt="FDS" /><span><strong>FDS</strong><small>Fintechno Development Solution</small></span></a>
+               <a class="catalog-brand" href="." aria-label="FDS home"><img :src="logoUrl" alt="FDS" /><span><strong>FDS</strong><small>Fintechno Development Solution</small></span></a>
                <span class="catalog-status">15 ready-to-use designs</span>
           </header>
 
@@ -59,7 +60,7 @@ function showCatalog() {
           </main>
           <footer class="catalog-footer">
                <div class="catalog-footer__brand">
-                    <img src="/logo-transparan.png" alt="Fintechno Development Solution" />
+                    <img :src="logoUrl" alt="Fintechno Development Solution" />
                     <p>Fintechno Development Solution<br /><span>Crafted for meaningful moments.</span></p>
                </div>
                <div class="catalog-footer__links">
