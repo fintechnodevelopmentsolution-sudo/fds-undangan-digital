@@ -63,7 +63,7 @@ function showCatalog() {
                     <p>Fintechno Development Solution<br /><span>Crafted for meaningful moments.</span></p>
                </div>
                <div class="catalog-footer__links">
-                    <a href="https://fintechnodevelopmentsolution-sudo.github.io/website-fds/" target="_blank" rel="noopener">Website</a>
+                    <a href="https://fintechnodevelopmentsolution-sudo.github.io/fds-website/" target="_blank" rel="noopener">Website</a>
                     <a href="https://www.instagram.com/fintechno_/" target="_blank" rel="noopener">Instagram</a>
                     <a href="https://wa.me/6281234567890" target="_blank" rel="noopener">Contact</a>
                </div>
