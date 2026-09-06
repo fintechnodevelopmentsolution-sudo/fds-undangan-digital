@@ -4,6 +4,145 @@
      --fds-ink: #18232b;
      --fds-soft: rgba(255, 255, 255, 0.72);
      --fds-line: rgba(24, 35, 43, 0.12);
+     --fds-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+     scroll-behavior: smooth;
+}
+
+body {
+     overflow-x: hidden;
+}
+
+body::before,
+body::after {
+     position: fixed;
+     z-index: -1;
+     width: 28rem;
+     height: 28rem;
+     border-radius: 50%;
+     content: "";
+     pointer-events: none;
+     filter: blur(3px);
+     opacity: 0.28;
+     animation: fds-drift 18s ease-in-out infinite alternate;
+}
+
+body::before {
+     top: -12rem;
+     left: -10rem;
+     background: var(--primary, var(--fds-coral));
+}
+
+body::after {
+     right: -13rem;
+     bottom: -14rem;
+     background: var(--gold, var(--fds-coral));
+     animation-delay: -7s;
+}
+
+button,
+a {
+     -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible {
+     outline: 3px solid var(--fds-coral);
+     outline-offset: 4px;
+}
+
+.hero,
+.card-box,
+.time-item,
+.rsvp-box,
+.fds-panel,
+.gallery-grid img {
+     transition: transform 500ms var(--fds-ease), box-shadow 500ms var(--fds-ease), border-color 300ms ease;
+}
+
+.hero:hover,
+.card-box:hover,
+.time-item:hover,
+.rsvp-box:hover,
+.fds-panel:hover {
+     border-color: color-mix(in srgb, var(--primary, var(--fds-coral)) 42%, transparent);
+     box-shadow: 0 22px 48px rgba(24, 35, 43, 0.12);
+     transform: translateY(-6px);
+}
+
+.gallery-grid img {
+     overflow: hidden;
+}
+
+.gallery-grid img:hover {
+     box-shadow: 0 20px 38px rgba(24, 35, 43, 0.16);
+     transform: translateY(-5px) scale(1.025);
+}
+
+.rsvp-box a,
+.fds-contact a,
+.music-toggle {
+     transition: transform 250ms var(--fds-ease), box-shadow 250ms var(--fds-ease), filter 250ms ease;
+}
+
+.rsvp-box a:hover,
+.fds-contact a:hover {
+     filter: saturate(1.12) brightness(1.04);
+     transform: translateY(-3px);
+}
+
+.music-toggle:hover {
+     box-shadow: 0 20px 38px rgba(24, 35, 43, 0.22);
+     transform: translateY(-3px) rotate(8deg) scale(1.06);
+}
+
+.reveal-in {
+     opacity: 0;
+     transform: translateY(26px) scale(0.985);
+     animation: none;
+}
+
+.reveal-in.is-visible {
+     animation: fds-reveal 800ms var(--fds-ease) both;
+}
+
+@keyframes fds-drift {
+     from {
+          transform: translate3d(0, 0, 0) scale(1);
+     }
+
+     to {
+          transform: translate3d(3rem, 2rem, 0) scale(1.12);
+     }
+}
+
+@keyframes fds-reveal {
+     from {
+          opacity: 0;
+          transform: translateY(26px) scale(0.985);
+     }
+
+     to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+     }
+}
+
+@media (prefers-reduced-motion: reduce) {
+     html {
+          scroll-behavior: auto;
+     }
+
+     *,
+     *::before,
+     *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+     }
 }
 
 .fds-brandbar {
