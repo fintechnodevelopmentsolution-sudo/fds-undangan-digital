@@ -10,8 +10,8 @@ Project ini memakai Vue + Vite dan sudah memiliki workflow GitHub Actions di `.g
 3. Pada **Build and deployment > Source**, pilih **GitHub Actions**.
 4. Setiap push ke `master` akan menjalankan build dan deploy otomatis.
 
-URL Pages:
-`https://fintechnodevelopmentsolution-sudo.github.io/undangan-online/`
+URL Pages mengikuti nama repository GitHub. Untuk repository `fds-undangan-digital`:
+`https://fintechnodevelopmentsolution-sudo.github.io/fds-undangan-digital/`
 
 Preview template dapat dibuka dengan query, misalnya:
-`https://fintechnodevelopmentsolution-sudo.github.io/undangan-online/?template=1`
+`https://fintechnodevelopmentsolution-sudo.github.io/fds-undangan-digital/?template=1`
