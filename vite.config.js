@@ -8,11 +8,7 @@ export default defineConfig({
           : '/',
      server: {
           watch: {
-               ignored: [
-                    '**/logo-transparan.png',
-                    '**/template-*/**',
-                    '**/all-template/**',
-               ],
+               // Removed ignored templates so Vite hot reloads changes
           },
      },
 });

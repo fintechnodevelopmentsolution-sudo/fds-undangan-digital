@@ -30,7 +30,7 @@ const names = [
 ];
 
 const palettes = [
-     ['#4d97c8', '#1e5d8c', '#ffffff', '#edf7fd'],
+     ['#DFA8A8', '#995B5B', '#FFFCFC', '#F9EFEF'], // Template 1: Elegant Bloom (Dusty Pink & Dark Rose)
      ['#5c86c1', '#294d82', '#ffffff', '#eef3fb'],
      ['#4aa3b5', '#1f6d7d', '#ffffff', '#eaf8fa'],
      ['#6c9bd0', '#356ba5', '#ffffff', '#eef5ff'],
