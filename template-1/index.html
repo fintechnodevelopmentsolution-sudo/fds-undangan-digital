@@ -1,154 +1,235 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-     <meta charset="UTF-8" />
-     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <title>Template 1 - Elegant Bloom</title>
-     <link rel="preconnect" href="https://fonts.googleapis.com" />
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-          rel="stylesheet" />
-     <link rel="stylesheet" href="style.css" />
-     <link rel="stylesheet" href="../fds-brand.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Pernikahan - Sunset Vintage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Vintage & Elegant Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Sacramento&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../fds-brand.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-     <audio id="bgm" loop autoplay>
-          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
-     </audio>
 
-     <button id="musicToggle" class="music-toggle" aria-label="musik">♫</button>
+    <!-- Audio Player -->
+    <audio id="bgm" loop>
+        <source id="bgmSource" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+    </audio>
 
-     <div class="page-shell">
-          <div class="fds-brandbar">
-               <a class="fds-brand" href="https://fintechnodevelopmentsolution-sudo.github.io/fds-website/"
-                    target="_blank" rel="noopener"><span class="fds-mark">FDS</span><span>Fintechno Development
-                         Solution<small>Fintechno Development Solution</small></span></a>
-               <p class="fds-brandbar__tag">Crafted with care</p>
-          </div>
-          <header class="hero">
-               <div class="hero__content">
-                    <p class="eyebrow">The Wedding of</p>
-                    <h1>Alya <span>&</span> Rafi</h1>
-                    <p class="subtitle">Dengan penuh syukur, kami mengundang Bapak/Ibu/Saudara/i hadir dalam pernikahan
-                         kami.</p>
-                    <div class="date-pill">22 November 2026</div>
-               </div>
-               <div class="hero__photo">
-                    <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1200&q=80"
-                         alt="Pengantin" />
-               </div>
-          </header>
+    <button id="musicToggle" class="music-toggle" aria-label="Toggle Music">
+        <i class="fas fa-compact-disc"></i>
+    </button>
 
-          <main>
-               <section class="intro card-box">
-                    <p>“Dan di antara tanda-tanda-Nya ialah Dia menciptakan pasangan-pasangan untukmu agar kamu merasa
-                         tenang dan Dia menjadikan di antaramu rasa kasih sayang.”</p>
-               </section>
+    <!-- Cover Overlay (Vintage Envelope) -->
+    <div id="coverOverlay" class="cover-overlay">
+        <div class="vintage-border">
+            <div class="cover-content">
+                <p class="eyebrow">The Wedding Of</p>
+                <h1 class="names">Alya <span>&</span> Rafi</h1>
+                
+                <div class="guest-info">
+                    <p>Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+                    <h2 id="coverGuestName" class="guest-name">Tamu Kehormatan</h2>
+                </div>
+                
+                <button id="openInviteBtn" class="btn-primary">
+                    <i class="fas fa-envelope-open"></i> Buka Undangan
+                </button>
+            </div>
+        </div>
+    </div>
 
-               <section class="details">
-                    <div class="card-box">
-                         <span class="label">Akad Nikah</span>
-                         <h3>08.00 WIB</h3>
-                         <p>Sabtu, 22 November 2026</p>
+    <!-- Main Content -->
+    <div id="mainContent" class="main-content" style="display: none;">
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content reveal-fade">
+                <p class="eyebrow-light">Pernikahan</p>
+                <h1 class="names-large">Alya & Rafi</h1>
+                <div class="divider-sun">
+                    <span>☀</span>
+                </div>
+                <p class="hero-date">22 November 2026</p>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <i class="fas fa-angle-double-down"></i>
+            </div>
+        </section>
+
+        <!-- Intro Section -->
+        <section class="intro section-padding vintage-texture">
+            <div class="container reveal-up text-center">
+                <h2 class="section-title">Kisah Kami</h2>
+                <div class="divider-vintage"></div>
+                <p class="quote-text">
+                    "Dan di antara tanda-tanda-Nya ialah Dia menciptakan pasangan-pasangan untukmu agar kamu merasa
+                    tenang kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang."
+                </p>
+                <p class="quote-source">— QS. Ar-Rum: 21 —</p>
+            </div>
+        </section>
+
+        <!-- Couple Section -->
+        <section class="couple section-padding">
+            <div class="container">
+                <div class="couple-wrapper">
+                    <!-- Bride -->
+                    <div class="couple-card reveal-left">
+                        <div class="vintage-frame">
+                            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80" alt="Bride">
+                        </div>
+                        <h3>Alya Maharani</h3>
+                        <p class="parents">Putri dari<br>Bpk. Abdullah & Ibu Siti</p>
+                        <a href="#" class="ig-link"><i class="fab fa-instagram"></i> @alyamhrn</a>
                     </div>
-                    <div class="card-box">
-                         <span class="label">Resepsi</span>
-                         <h3>11.00 WIB</h3>
-                         <p>Grand Garden Hall, Bandung</p>
-                    </div>
-                    <div class="card-box">
-                         <span class="label">Dress Code</span>
-                         <h3>Elegant Pastel</h3>
-                         <p>Pastel, formal, dan nyaman</p>
-                    </div>
-               </section>
-
-               <section class="schedule">
-                    <div class="section-title">
-                         <p class="eyebrow small">Agenda</p>
-                         <h2>Acara Kami</h2>
+                    
+                    <div class="couple-and reveal-fade">
+                        <span>&</span>
                     </div>
 
-                    <div class="timeline">
-                         <div class="time-item">
-                              <span class="time">08.00</span>
-                              <div>
-                                   <h4>Akad Nikah</h4>
-                                   <p>Prosesi ijab kabul dimulai</p>
-                              </div>
-                         </div>
-                         <div class="time-item">
-                              <span class="time">10.00</span>
-                              <div>
-                                   <h4>Foto Bersama</h4>
-                                   <p>Rangkaian foto keluarga dan sahabat</p>
-                              </div>
-                         </div>
-                         <div class="time-item">
-                              <span class="time">11.00</span>
-                              <div>
-                                   <h4>Resepsi</h4>
-                                   <p>Makan siang dan hiburan bersama</p>
-                              </div>
-                         </div>
+                    <!-- Groom -->
+                    <div class="couple-card reveal-right">
+                        <div class="vintage-frame">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80" alt="Groom">
+                        </div>
+                        <h3>Rafi Ahmad</h3>
+                        <p class="parents">Putra dari<br>Bpk. Heryanto & Ibu Rini</p>
+                        <a href="#" class="ig-link"><i class="fab fa-instagram"></i> @rafiahmad</a>
                     </div>
-               </section>
+                </div>
+            </div>
+        </section>
 
-               <section class="gallery">
-                    <div class="section-title">
-                         <p class="eyebrow small">Gallery</p>
-                         <h2>Kenangan Kami</h2>
-                    </div>
-                    <div class="gallery-grid">
-                         <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=900&q=80"
-                              alt="Gallery 1" />
-                         <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=80"
-                              alt="Gallery 2" />
-                         <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80"
-                              alt="Gallery 3" />
-                    </div>
-               </section>
+        <!-- Event Details Section -->
+        <section class="events section-padding vintage-texture">
+            <div class="container">
+                <h2 class="section-title text-center">Detail Acara</h2>
+                <div class="divider-vintage"></div>
+                <p class="desc text-center">Dengan memohon rahmat Allah SWT, kami mengundang Bapak/Ibu/Saudara/i <strong id="eventGuestName" class="text-sunset">Tamu Kehormatan</strong> untuk hadir.</p>
 
-               <section class="rsvp">
-                    <div class="rsvp-box">
-                         <p class="eyebrow small">Konfirmasi</p>
-                         <h2>Kami Menantikan Kehadiran Anda</h2>
-                         <p>Mohon konfirmasi kehadiran sebelum 1 November 2026.</p>
-                         <a href="https://wa.me/6281234567890" target="_blank">RSVP WhatsApp</a>
+                <div class="events-grid">
+                    <!-- Akad -->
+                    <div class="event-card reveal-up">
+                        <div class="event-header sunset-bg">
+                            <h3>Akad Nikah</h3>
+                        </div>
+                        <div class="event-body">
+                            <p class="event-date"><i class="far fa-calendar-alt"></i> Sabtu, 22 November 2026</p>
+                            <p class="event-time"><i class="far fa-clock"></i> 08.00 - 10.00 WIB</p>
+                            <p class="event-loc"><i class="fas fa-map-marker-alt"></i> <strong>Masjid Raya Bandung</strong><br>Jl. Asia Afrika, Bandung</p>
+                            <a href="https://maps.google.com" target="_blank" class="btn-outline">Lokasi Maps</a>
+                        </div>
                     </div>
-               </section>
-          </main>
-          <section class="fds-extra">
-               <div class="fds-panel">
-                    <p class="fds-kicker">FDS experience</p>
-                    <h2>Lebih dari sekadar undangan.</h2>
-                    <p>Bagikan cerita, detail acara, dan momen bahagia dalam satu halaman yang mudah dibuka dari
-                         perangkat apa pun.</p>
-                    <ul class="fds-perks">
-                         <li>Desain personal sesuai karakter pasangan</li>
-                         <li>RSVP dan lokasi acara yang praktis</li>
-                         <li>Galeri kenangan yang hangat dan responsif</li>
-                    </ul>
-               </div>
-               <div class="fds-panel">
-                    <p class="fds-kicker">Need a custom look?</p>
-                    <h3>Wujudkan versi kamu bersama FDS.</h3>
-                    <p>Konsultasikan warna, foto, musik, dan susunan acara untuk pengalaman undangan yang terasa
-                         benar-benar milikmu.</p>
-                    <div class="fds-contact"><a href="https://wa.me/6281234567890" target="_blank">Chat FDS</a></div>
-               </div>
-          </section>
-          <footer class="fds-footer"><span><strong>FDS</strong> · Fintechno Development Solution</span><span
-                    class="fds-socials"><a href="https://fintechnodevelopmentsolution-sudo.github.io/fds-website/"
-                         target="_blank" rel="noopener">Website</a><a href="https://www.tiktok.com/@fintechno_"
-                         target="_blank" rel="noopener">TikTok</a><a href="https://www.instagram.com/fintechno_/"
-                         target="_blank" rel="noopener">Instagram</a></span><span>Made for
-                    your meaningful moments</span></footer>
-     </div>
+                    
+                    <!-- Resepsi -->
+                    <div class="event-card reveal-up delay-1">
+                        <div class="event-header sunset-bg">
+                            <h3>Resepsi</h3>
+                        </div>
+                        <div class="event-body">
+                            <p class="event-date"><i class="far fa-calendar-alt"></i> Sabtu, 22 November 2026</p>
+                            <p class="event-time"><i class="far fa-clock"></i> 11.00 - 14.00 WIB</p>
+                            <p class="event-loc"><i class="fas fa-map-marker-alt"></i> <strong>Grand Garden Hall</strong><br>Jl. Setiabudi, Bandung</p>
+                            <a href="https://maps.google.com" target="_blank" class="btn-outline">Lokasi Maps</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Countdown -->
+                <div class="countdown-container reveal-up delay-2">
+                    <h3>Menuju Hari Bahagia</h3>
+                    <div class="divider-sun small"><span>☀</span></div>
+                    <div class="countdown" id="countdown">
+                        <div class="time-box"><span id="cd-days">00</span><p>Hari</p></div>
+                        <div class="time-box"><span id="cd-hours">00</span><p>Jam</p></div>
+                        <div class="time-box"><span id="cd-minutes">00</span><p>Menit</p></div>
+                        <div class="time-box"><span id="cd-seconds">00</span><p>Detik</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-     <script src="script.js"></script>
+        <!-- Gallery Section -->
+        <section class="gallery section-padding">
+            <div class="container">
+                <h2 class="section-title text-center">Kenangan Kami</h2>
+                <div class="divider-vintage"></div>
+                
+                <div class="polaroid-grid reveal-up">
+                    <div class="polaroid">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Gallery 1">
+                        <p class="caption">Momen Indah</p>
+                    </div>
+                    <div class="polaroid tilt-right">
+                        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=80" alt="Gallery 2">
+                        <p class="caption">Senja Bersama</p>
+                    </div>
+                    <div class="polaroid tilt-left">
+                        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=80" alt="Gallery 3">
+                        <p class="caption">Langkah Baru</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Gift (QR Code) Section -->
+        <section class="gift section-padding vintage-texture">
+            <div class="container">
+                <div class="gift-card reveal-up">
+                    <div class="gift-header">
+                        <i class="fas fa-gift gift-icon"></i>
+                        <h2>Special Gift</h2>
+                        <p class="subtitle">Klaim Souvenir Khusus Anda</p>
+                    </div>
+                    
+                    <div class="gift-content">
+                        <p class="gift-desc">Tunjukkan Barcode / QR Code ini di <strong>Meja Penerima Tamu</strong> untuk mendapatkan souvenir spesial yang telah kami siapkan khusus untuk Anda.</p>
+                        
+                        <div class="qr-ticket">
+                            <div class="ticket-left">
+                                <h3 id="qrCodeText" class="qr-name">Nama Tamu</h3>
+                                <p class="ticket-label">VVIP GUEST</p>
+                            </div>
+                            <div class="ticket-right">
+                                <img id="qrCodeImage" src="" alt="QR Code Klaim Souvenir" class="qr-img" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP & Footer -->
+        <section class="rsvp section-padding">
+            <div class="container text-center reveal-up">
+                <h2 class="section-title">Konfirmasi Kehadiran</h2>
+                <div class="divider-vintage"></div>
+                <p class="mb-4">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.</p>
+                <a href="https://wa.me/6281234567890" target="_blank" class="btn-primary">
+                    <i class="fab fa-whatsapp"></i> RSVP via WhatsApp
+                </a>
+            </div>
+        </section>
+
+        <!-- FDS Brand Footer (Preserved as requested in templates) -->
+        <footer class="fds-footer sunset-footer">
+            <span><strong>FDS</strong> &middot; Fintechno Development Solution</span>
+            <span class="fds-socials">
+                <a href="https://fintechnodevelopmentsolution-sudo.github.io/fds-website/" target="_blank" rel="noopener">Website</a>
+                <a href="https://www.tiktok.com/@fintechno_" target="_blank" rel="noopener">TikTok</a>
+                <a href="https://www.instagram.com/fintechno_/" target="_blank" rel="noopener">Instagram</a>
+            </span>
+            <span>Made for your meaningful moments</span>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
